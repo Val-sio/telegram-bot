@@ -19,9 +19,9 @@ from telegram.ext import (
 )
 
 # ─── Настройки ───────────────────────────────────────────────────────────────
-BOT_TOKEN = 8610613129:AAGtDbgtyxigBi3E_BaRb7R6DpI-HQvh3cc       # токен от @BotFather
+BOT_TOKEN = "8610613129:AAGtDbgtyxigBi3E_BaRb7R6DpI-HQvh3cc"       # токен от @BotFather
 ADMIN_CHAT_ID = 1150947024            
-KIE_API_KEY = 9e38c0f07f3dcb598db06531b7cc451e    # ключ от kie.ai
+KIE_API_KEY = "9e38c0f07f3dcb598db06531b7cc451e"    # ключ от kie.ai
 CSV_FILE = "orders.csv"
 
 SYSTEM_PROMPT = """Ты умный помощник в Telegram-боте.
