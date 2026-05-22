@@ -21,7 +21,7 @@ from telegram.ext import (
 # ─── Настройки ───────────────────────────────────────────────────────────────
 BOT_TOKEN = "8610613129:AAGtDbgtyxigBi3E_BaRb7R6DpI-HQvh3cc"       # токен от @BotFather
 ADMIN_CHAT_ID = 1150947024            
-KIE_API_KEY = "9e38c0f07f3dcb598db06531b7cc451e"    # ключ от kie.ai
+OPENROUTER_API_KEY = "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" 
 CSV_FILE = "orders.csv"
 
 SYSTEM_PROMPT = """Ты умный помощник в Telegram-боте.
@@ -63,10 +63,10 @@ async def ask_ai(user_id: int, message: str) -> str:
     try:
         async with httpx.AsyncClient(timeout=30) as client:
             response = await client.post(
-                "https://api.kie.ai/v1/chat/completions",
+                "https://openrouter.ai/api/v1/chat/completions",
                 headers={"Authorization": f"Bearer {KIE_API_KEY}", "Content-Type": "application/json"},
                 json={
-                    "model": "claude-haiku-4-5",
+                    "model": "meta-llama/llama-3.1-8b-instruct:free",
                     "messages": [{"role": "system", "content": SYSTEM_PROMPT}, *chat_histories[user_id]],
                     "max_tokens": 500,
                 },
