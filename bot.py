@@ -15,7 +15,7 @@ from telegram.ext import (
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "8610613129:AAGtDbgtyxigBi3E_BaRb7R6DpI-HQvh3cc")
 ADMIN_CHAT_ID = 1150947024
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "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"
 CSV_FILE = "orders.csv"
 
 SYSTEM_PROMPT = """Ты умный помощник в Telegram-боте.
